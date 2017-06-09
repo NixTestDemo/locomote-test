@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AIR</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="vendor/datepicker/datepicker.css">
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>AIR</h2>
+    <form name="flyForm" id="flyForm">
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label for="from">From location:</label>
+                <input class="form-control" type="text" name="from" id="from" placeholder="Travel from"/>
+            </div>
+            <div class="col-md-12 form-group">
+                <label for="to">To location:</label>
+                <input class="form-control" type="text" name="to" id="to" placeholder="Travel to"/>
+            </div>
+            <div class="col-md-12 form-group">
+                <label for="date">Date:</label>
+                <input type="text" class="form-control datepicker" id="date" placeholder="Traveling date">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group pull-right">
+                    <button type="button" class="btn btn-secondary" id="clearBtn">Clear</button>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="loader text-center"></div>
+        </div>
+    </div>
+    <div id="results">
+        <div>
+            <ul class="nav nav-tabs" role="tablist" id="data-tabs">
+                <li role="presentation"><a href="#table-1" aria-controls="table-1" role="tab" id="tab-table-1"
+                                                          data-toggle="tab"></a></li>
+                <li role="presentation"><a href="#table-2" aria-controls="table-2" role="tab" id="tab-table-2"
+                                           data-toggle="tab"></a></li>
+                <li role="presentation" class="active"><a href="#table-3" aria-controls="table-3" role="tab" id="tab-table-3" data-toggle="tab"></a>
+                </li>
+                <li role="presentation"><a href="#table-4" aria-controls="table-4" role="tab" id="tab-table-4" data-toggle="tab"></a>
+                </li>
+                <li role="presentation"><a href="#table-5" aria-controls="table-5" role="tab" id="tab-table-5" data-toggle="tab"></a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane" id="table-1">
+                </div>
+                <div role="tabpanel" class="tab-pane" id="table-2">
+                </div>
+                <div role="tabpanel" class="tab-pane active" id="table-3">
+                </div>
+                <div role="tabpanel" class="tab-pane" id="table-4">
+                </div>
+                <div role="tabpanel" class="tab-pane" id="table-5">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="vendor/bootstrap/bootstrap.min.js"></script>
+<script src="vendor/datepicker/datepicker.js"></script>
+<script src="src/app.js"></script>
+</body>
+</html>
